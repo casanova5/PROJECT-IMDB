@@ -14,7 +14,7 @@ EMAIL_PASS = os.environ.get("USER_PASS")
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  passwd="balaji02",
+  passwd="******",
   database="tvshow"
 )
 
