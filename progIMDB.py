@@ -15,7 +15,7 @@ EMAIL_PASS = os.environ.get("USER_PASS")
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  passwd="******",
+  passwd="balaji02",
   database="tvshow"
 )
 
@@ -38,7 +38,7 @@ except:
     mydb.rollback()
 
 #Add data to your table
-def add_data(email, shows):
+def choices(email, shows):
     try:
         mycursor.execute("INSERT INTO User_Choice(Email, TV_Shows) VALUES (email, shows);")
         mydb.commit()
@@ -162,10 +162,10 @@ def main(entered_choice):
 
 #Functioning of the code begins here
 user_email = input("Enter your email id: ")
-shows_input = input("Enter the list of shows(seperated by comma): ")
+shows_input = input("Enter the list of shows(make sure to seperate them by comma): ")
 shows_list = shows_input.split(',')
-add_data(user_email, shows_input)
-print("\n...Fetching data for shows...\n")
+choices(user_email, shows_input)
+print("\n...Going through your choices...\n")
 
 for show in shows_list:
     main(show)
