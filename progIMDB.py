@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
 import urllib.request
+import os
 import datetime
 import mysql.connector
 from tabulate import tabulate
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import os
+
 
 EMAIL_ADDRESS = os.environ.get("USER_NAME")
 EMAIL_PASS = os.environ.get("USER_PASS")
