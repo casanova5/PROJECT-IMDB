@@ -173,7 +173,7 @@ for show in shows_list:
 #SENDING EMAIL
 try:
     message = MIMEMultipart()
-    message["Subject"] = "Schedule of your favorite TV Shows"
+    message["Subject"] = "Details of your TV Shows"
     message["From"] = EMAIL_ADDRESS
     message["To"] = user_email
 
